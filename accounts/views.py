@@ -10,3 +10,4 @@ class SignUp(CreateView):
     template_name = 'accounts/signup.html'
 
 
+
