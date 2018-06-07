@@ -37,7 +37,7 @@ class Group(models.Model):
 
     class Meta:
         ordering = (
-            'name'
+            'name',
         )
 
 
