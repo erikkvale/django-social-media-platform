@@ -29,7 +29,7 @@ class UserPosts(generic.ListView):
 
     def get_queryset(self):
         try:
-            self.post.user = (
+            self.post_user = (
                 User.objects.prefetch_related('posts').
                 get(username__iexact=self.kwargs.get('username'))
             )
