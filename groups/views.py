@@ -38,6 +38,7 @@ class JoinGroup(LoginRequiredMixin, generic.RedirectView):
             messages.warning(self.request, 'Warning already a member!')
         else:
             messages.success(self.request, 'You are now a member!')
+        return super().get(request, *args, **kwargs)
 
 
 class LeaveGroup(LoginRequiredMixin, generic.RedirectView):
