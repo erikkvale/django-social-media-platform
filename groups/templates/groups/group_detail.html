@@ -2,7 +2,7 @@
 
 {% block pregroup %}
     <h1>{{ group.name }}</h1>
-    <h2> Member Count: {{ groups.members.count }}</h2>
+    <h2> Member Count: {{ group.members.count }}</h2>
 
     <div class="content">
         {% if user in group.members.all %}
