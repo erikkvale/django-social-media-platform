@@ -20,12 +20,11 @@ class Group(models.Model):
     def __str__(self):
         return self.name
 
-    def save(self, force_insert=False, force_update=False, using=None,
-             update_fields=None):
+    def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
         # For possible markdown
         self.description_html = misaka.html(self.description)
-        super().save()
+        super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse(
